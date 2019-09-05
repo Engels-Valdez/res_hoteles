@@ -1,0 +1,1 @@
+<?php require_once('../view/page/HotelView.php'); ?>
