@@ -1,0 +1,110 @@
+.opat{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.font1{
+    font-family: Gayathri;
+    
+}
+
+.buscador{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+
+.post-destinos{
+    background-color: white;
+    width: 100%;
+    height: 200px;
+
+}
+
+.bg-gris{
+    background-color: #E0E0E0;
+}
+
+.articulos{
+    background: white;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    height: 230spx;
+    width: 100%;
+}
+
+.barra{
+    height: 30px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    border: 0px solid #000000;
+    font-family: Gayathri;
+    padding: 7px
+}
+
+.titulo-post{
+    font-size: 25px;
+}
+
+.ciudad-post{
+    color: #2C3E50 ;
+    font-size: 25px;
+    font-family:  Geneva;
+}
+
+.ubicacion-post{
+    color: #2C3E50 ;
+    font-size: 20px;
+    font-family:  Geneva;
+}
+
+
+.estrella-v{
+    color: yellow;
+}
+
+.resultado-busqueda{
+    margin-left: 5px;
+    font-family: Abel;
+    font-size: 40px;
+}
+
+.ul-redes-sociales{
+    position: fixed;
+    margin-top: 200px;
+    list-style: none;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+
+    
+    
+}
+
+.li-redes-sociales{
+    margin-left: 5px;
+    background-color:  #eeeeee ;
+    padding: 3px;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+
+
+#f{
+   color:#01579B ;
+}
+
+#i{
+    color: #CC00CC ;
+ }
+
+ #y{
+    color: red;
+ }
+
+ 

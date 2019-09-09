@@ -1,7 +1,9 @@
 <!-- Image and text -->
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-dark bg-dark fixed-top">
   <a class="navbar-brand" href="#">
-    <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Bootstrap
+    <img src="../view/asset/mery.png" width="150" height="40" class="d-inline-block align-top" alt="">
   </a>
+  <ul class="navbar-nav">
+    <li class="nav-items"><a href="#" class="nav-link">Registrar / Iniciar seccion</a></li>
+  </ul>
 </nav>
