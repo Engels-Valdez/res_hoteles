@@ -88,20 +88,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <i class="fas fa-globe-americas mt-5" style="font-size: 100px; margin-left: 80px;"></i>
-                <div class="row"><span class="badge badge-danger mt-2" style="margin:auto">America</span></div>
+                <!--<i class="fas fa-globe-americas mt-5" style="font-size: 100px; margin-left: 80px;"></i>-->
+                <img src="../view/asset/puntacana.png" alt="" srcset="" style=" width: 100px; margin-left: 80px;" class="mt-5">
+                <div class="row"><span class="badge badge-danger mt-2" style="margin:auto">Zona Este</span></div>
             </div>
             <div class="col-md-3">
-                <i class="fas fa-globe-europe mt-5" style="font-size: 100px; margin-left: 80px;"></i>
-                <div class="row"><span class="badge badge-danger mt-2" style="margin:auto">Europa</span></div>
+                <img src="../view/asset/puertoplanta.jpg" alt="" srcset="" style=" width: 170px; margin-left: 50px;" class="mt-5">
+                <div class="row"><span class="badge badge-danger mt-2" style="margin:auto">Zona Norte</span></div>
             </div>
             <div class="col-md-3">
-                <i class="fas fa-globe-asia mt-5" style="font-size: 100px; margin-left: 80px;"></i>
-                <div class="row"><span class="badge badge-danger mt-2" style="margin:auto">Asia</span></div>
+                <img src="../view/asset/sosua.png" alt="" srcset="" style=" width: 200px; margin-left: 60px;" class="mt-5">
+                <div class="row"><span class="badge badge-danger mt-2" style="margin:auto">Zona Norte</span></div>
             </div>
             <div class="col-md-3">
-                <i class="fas fa-globe-africa mt-5" style="font-size: 100px; margin-left: 80px;"></i>
-                <div class="row"><span class="badge badge-danger mt-2" style="margin:auto">Africa</span></div>
+                <img src="../view/asset/capcana.png" alt="" srcset="" style=" width: 110px; margin-left: 60px;" class="mt-5">
+                <div class="row"><span class="badge badge-danger mt-2" style="margin:auto">Zona Este</span></div>
             </div>
         </div>
     </div>
