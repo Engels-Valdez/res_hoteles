@@ -1,7 +1,7 @@
 <?php require_once('../view/page/layout/head.php') ?>
     <title>Mery Tours | Home</title>
 </head>
-<body class="bg-gris">
+<body>
 <!--Iconos de las redes sociales-->
 <ul class="ul-redes-sociales">
     <li class="li-redes-sociales"><a href="#"><i id="f" class="fab fa-facebook-square"></i></a></li>
@@ -113,16 +113,6 @@
 
 <!--Contenido prinpical-->
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb bg-gris">
-                    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Hoteles</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
     <div class="row mb-3">
         <div class="col-md-12">
             <Span class="resultado-busqueda">Resultados de la busqueda</Span>
@@ -133,7 +123,7 @@
             <main>
                 <section>
                    <article>
-                   <div class="articulos mb-3">
+                   <div class="articulos mb-3 border">
                         <div class="barra bg-warning">En oferta con un 30% de descuento</div>
                         <div class="row">
                             <div class="col-md-4">
