@@ -21,8 +21,8 @@
 
 }
 
-.bg-gris{
-    background-color: #E0E0E0;
+.bg-blanco{
+    background-color: white;
 }
 
 .articulos{
@@ -43,7 +43,7 @@
     -webkit-border-radius: 10px 10px 0px 0px;
     border: 0px solid #000000;
     font-family: Gayathri;
-    padding: 7px
+    padding: 7px;
 }
 
 .titulo-post{
