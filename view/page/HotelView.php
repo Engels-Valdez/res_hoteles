@@ -112,7 +112,7 @@
                             <div class="col-md-3 mt-3">
                                 <span class="badge badge-danger">Orferta $RD: 5,000.00</span><br>
                                 <span>$RD: <b>10,000.00</b> por noche</span><br> <hr>
-                                <a href="#" class="btn btn-primary btn-sm">Reservar</a>
+                                <a href="../rt/reservaciones.php" class="btn btn-primary btn-sm">Reservar</a>
                             </div>
                         </div>
                     </div>
