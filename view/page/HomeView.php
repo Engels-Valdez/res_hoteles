@@ -163,7 +163,7 @@
                                 </p>
                             </div>
                             <div class="col-md-2">
-                            <a href="#" class="btn btn-primary " style="margin-top:150px">Ver mas</a>
+                            <a href="../rt/hotel.php" target="blank" class="btn btn-primary " style="margin-top:150px">Ver mas</a>
                             </div>
                         </div>
                    </div> 
