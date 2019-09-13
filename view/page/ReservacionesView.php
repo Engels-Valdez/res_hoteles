@@ -32,7 +32,7 @@
 
         <div class="mb-3">
           <label for="email">Correo</label>
-          <div class="input-group">
+          <div class="input-group">z
             <div class="input-group-prepend">
               <span class="input-group-text">@</span>
             </div>

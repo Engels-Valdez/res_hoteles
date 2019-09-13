@@ -126,7 +126,7 @@
                    <div class="articulos mb-3 border">
                         <div class="barra bg-warning">En oferta con un 30% de descuento</div>
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <!--<img src="../view/asset/riu.jpg" class="rounded" alt="..." width=" 300">-->
                                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                                     <div class="carousel-inner">
@@ -151,7 +151,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6"> 
-                                <p class="titulo-post"> <a href="#"><b>RIU Palace Punta Cana All Inclusive</b></a></p>
+                                <p class="titulo-post"> <a href="hotel.php"><b>RIU Palace Punta Cana All Inclusive</b></a></p>
                                 <span class="ciudad-post">Punta Cana</span>
                                 <p><span class="ubicacion-post">Calle/central no.1</span></p>
                                 <p>
@@ -162,150 +162,10 @@
                                     <i class="fas fa-star estrella-v"></i>
                                 </p>
                             </div>
-                            <div class="col-md-2">
-                            <a href="../rt/hotel.php" target="blank" class="btn btn-primary " style="margin-top:150px">Ver mas</a>
-                            </div>
                         </div>
                    </div> 
                    </article>
-                   <article>
-                   <div class="articulos mb-3">
-                        <div class="barra bg-warning">En oferta con un 30% de descuento</div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <!--<img src="../view/asset/riu.jpg" class="rounded" alt="..." width=" 300">-->
-                                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                        <img src="../view/asset/riu3.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                        <img src="../view/asset/riu.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                        <img src="../view/asset/riu2.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                    </div>
-                                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6"> 
-                                <p class="titulo-post"> <a href="#"><b>RIU Palace Punta Cana All Inclusive</b></a></p>
-                                <span class="ciudad-post">Punta Cana</span>
-                                <p><span class="ubicacion-post">Calle/central no.1</span></p>
-                                <p>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                            <a href="#" class="btn btn-primary " style="margin-top:150px">Ver mas</a>
-                            </div>
-                        </div>
-                   </div> 
-                   </article>
-                   <article>
-                   <div class="articulos mb-3">
-                        <div class="barra bg-warning">En oferta con un 30% de descuento</div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <!--<img src="../view/asset/riu.jpg" class="rounded" alt="..." width=" 300">-->
-                                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                        <img src="../view/asset/riu3.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                        <img src="../view/asset/riu2.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                        <img src="../view/asset/riu.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                    </div>
-                                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6"> 
-                                <p class="titulo-post"> <a href="#"><b>RIU Palace Punta Cana All Inclusive</b></a></p>
-                                <span class="ciudad-post">Punta Cana</span>
-                                <p><span class="ubicacion-post">Calle/central no.1</span></p>
-                                <p>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                            <a href="#" class="btn btn-primary " style="margin-top:150px">Ver mas</a>
-                            </div>
-                        </div>
-                   </div> 
-                   </article>
-                   <article>
-                   <div class="articulos mb-3">
-                        <div class="barra bg-warning">En oferta con un 30% de descuento</div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <!--<img src="../view/asset/riu.jpg" class="rounded" alt="..." width=" 300">-->
-                                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                        <img src="../view/asset/riu.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                        <img src="../view/asset/riu2.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                        <img src="../view/asset/riu3.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                    </div>
-                                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6"> 
-                                <p class="titulo-post"> <a href="#"><b>RIU Palace Punta Cana All Inclusive</b></a></p>
-                                <span class="ciudad-post">Punta Cana</span>
-                                <p><span class="ubicacion-post">Calle/central no.1</span></p>
-                                <p>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                </p>
-                            </div>
-                            <div class="col-md-2">
-                            <a href="#" class="btn btn-primary " style="margin-top:150px">Ver mas</a>
-                            </div>
-                        </div>
-                   </div> 
-                   </article>
+                  
                 </section>
             </main>
         </div>
