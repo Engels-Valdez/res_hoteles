@@ -1,1 +1,1 @@
-<?php require_once('../view/page/HomeView.php'); ?>
+<?php require_once('../controller/HomeController.php'); ?>

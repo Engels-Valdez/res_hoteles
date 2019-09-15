@@ -43,17 +43,18 @@
                         </div>
                     </div>
                     
-                    <form id="frm-busquedaHoteles">
+                    <form id="frmBusquedaHoteles" action="home.php" method="post">
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <input type="text" name="hotel" placeholder="Buscar hoteles" class="form-control form-control-sm">
                             </div>
                             <div class="col-md-4">
                                 <select name="ciudad" class="form-control form-control-sm">
-                                    <option value="">Santo Domingo</option>
-                                    <option value="">Bavaro Punta Cana</option>
-                                    <option value="">Puerto Plata</option>
-                                    <option value="">La romana</option>
+                                    <option value="Santo Domingo">Santo Domingo</option>
+                                    <option value="Punta Cana">Punta Cana</option>
+                                    <option value="Puerto Plata">Puerto Plata</option>
+                                    <option value="La Romana">La Romana</option>
+                                    <option value="Sosua">Sosua</option>
                                 </select>
                             </div>
                         </div>
@@ -67,16 +68,19 @@
                         </div>
                         <div class="row mt-3">  
                             <div class="col-md-4">
-                                <input type="submit" name="enviar" value="Buscar" class="btn btn-warning btn-sm btn-block">
+                                <input type="submit" name="buscarHotel" id="buscarHoteles" value="Buscar hoteles" class="btn btn-warning btn-sm btn-block">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="custom-control custom-checkbox mt-3">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Busqueda avanzada</label>
+                            <?php if( $msj ) : ?>
+                                <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+                                    <strong>Aviso!</strong> No puede haber campos vacio en la busqueda.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
-                            </div>
+                            <?php endif;?>
                         </div>
                     </form>
                 </div>
@@ -114,7 +118,7 @@
 <!--Contenido prinpical-->
 <div class="container">
     <div class="row mb-3">
-        <div class="col-md-12">
+        <div class="col-md-12" id='resultado-busqueda'>
             <Span class="resultado-busqueda">Resultados de la busqueda</Span>
         </div>
     </div>
@@ -122,23 +126,20 @@
         <div class="col-md-10">
             <main>
                 <section>
+                    <?php foreach($hoteles as $fh) : ?>
                    <article>
-                   <div class="articulos mb-3 border">
+                   <div class="articulos mb-3 border" id="articulo">
                         <div class="barra bg-warning">En oferta con un 30% de descuento</div>
                         <div class="row">
                             <div class="col-md-6">
                                 <!--<img src="../view/asset/riu.jpg" class="rounded" alt="..." width=" 300">-->
                                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                                     <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                        <img src="../view/asset/riu.jpg" class="d-block w-100" alt="...">
+                                        <?php foreach( $fotos as $ft ) : ?>
+                                        <div class="carousel-item <?= $ft['imagen_principal']?>">
+                                            <img src="<?= $ft['foto'] ?>" class="d-block w-100" alt="...">
                                         </div>
-                                        <div class="carousel-item">
-                                        <img src="../view/asset/riu2.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                        <img src="../view/asset/riu3.jpg" class="d-block w-100" alt="...">
-                                        </div>
+                                        <?php endforeach;?>
                                     </div>
                                     <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -151,33 +152,23 @@
                                 </div>
                             </div>
                             <div class="col-md-6"> 
-                                <p class="titulo-post"> <a href="hotel.php"><b>RIU Palace Punta Cana All Inclusive</b></a></p>
-                                <span class="ciudad-post">Punta Cana</span>
-                                <p><span class="ubicacion-post">Calle/central no.1</span></p>
+                                <p class="titulo-post"> <a href="hotel.php?id=<?= $fh['id']?>" target="blank"><b><?=$fh['nombre']?></b></a></p>
+                                <hr>
+                                <span class="ciudad-post"><?=$fh['provincia']?></span>
+                                <p><span class="ubicacion-post">C/av.<?=$fh['calle']?></span></p>
+                                <hr>
                                 <p>
+                                    <?php for($i = 0; $i < $fh['prestigio']; $i++) : ?>
                                     <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
+                                <?php endfor;?>
                                 </p>
                             </div>
                         </div>
                    </div> 
                    </article>
-                  
+                <?php endforeach;?>
                 </section>
             </main>
-        </div>
-        <div class="col-md-2">
-            <aside>
-                <div class="card" style="width: 18rem;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241953.25400494854!2d-68.61143202233569!3d18.640665633413388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea891645dcbfe77%3A0x61881cfaed12f6f3!2sPunta%20Cana!5e0!3m2!1ses-419!2sdo!4v1568046050297!5m2!1ses-419!2sdo" width="286" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                <div class="card-body">
-                    <center><p class="card-text">Localizacion</p></center> 
-                </div>
-                </div>
-            </aside>
         </div>
     </div>
 </div>    

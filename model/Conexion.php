@@ -2,19 +2,19 @@
 
     class Conexion{
         
-        public static function conectar(){
+    public static function conectar(){
 
-            try {
+        try {
 
-                $conec = new PDO('mysql:host=localhot; dbname=res_hoteles','root','pHe220728?');
+            $conect = new PDO('mysql:host=localhost; dbname=res_hoteles;','root','pHe220728?');
 
-            } catch (PDOException $e) {
+        } catch (PDOException $e) {
 
-                echo 'Error: '.$e->getMessage();
-                
-            }
-
-            return $conec;
+            echo 'Error: '.$e->getMessage();
+            
         }
 
+        return $conect;
     }
+
+}
