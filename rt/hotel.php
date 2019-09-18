@@ -1,1 +1,1 @@
-<?php require_once('../view/page/HotelView.php'); ?>
+<?php require_once('../controller/HotelController.php'); ?>

@@ -1,5 +1,5 @@
 <?php require_once('../view/page/layout/head.php') ?>
-    <title>Hoteles</title>
+    <title>Mery Tours | Hoteles</title>
 </head>
 <body>
 <header>
@@ -12,17 +12,13 @@
             <main>
                 <div class="row" style="margin-top:100px">
                     <div class="col-md-8">
-                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel1">
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="../view/asset/riu3.jpg" class="d-block w-100" alt="...">
+                                <?php foreach( $fotoHotel as $fth ) : ?>
+                                <div class="carousel-item <?= $fth['imagen_principal'] ?>">
+                                    <img src="<?= $fth['foto'] ?>" class="d-block w-100" alt="...">
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="../view/asset/riu.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="../view/asset/riu2.jpg" class="d-block w-100" alt="...">
-                                </div>
+                                <?php endforeach;?>
                             </div>
                                 <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon text-dark" aria-hidden="true"></span>
@@ -36,26 +32,44 @@
                     </div>
                     <div class="col-md-4">
                         <div class="row">
+                            <?php foreach( $hotel as $ht ) : ?>
                             <div class="col-md-12">
-                                <p class="titulo-post"> <a href="#"><b>RIU Palace Punta Cana All Inclusive</b></a></p>
-                                <hr>
+                                <p class="titulo-post"> <a href="#"><b><?= $ht['nombre'] ?></b></a></p>
+                                
                             </div>
                             <div class="col-md-12">
                                 <p>
+                                    <?php for($i = 0; $i < $ht['prestigio']; $i++) : ?>
                                     <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
-                                    <i class="fas fa-star estrella-v"></i>
+                                    <?php endfor; ?>
                                 </p>
-                                <hr>
+                                
                             </div>
                             <div class="col-md-12">
-                                <p><span class="ubicacion-post">Calle/central no.1</span></p>
-                                <hr>
+                                <p><span class="ubicacion-post"><?= $ht['provincia'] ?> / <?= $ht['calle'] ?></span></p>
+                                
                             </div>
                             <div class="col-md-12">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241953.25400494854!2d-68.61143202233569!3d18.640665633413388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ea891645dcbfe77%3A0x61881cfaed12f6f3!2sPunta%20Cana!5e0!3m2!1ses-419!2sdo!4v1568127480103!5m2!1ses-419!2sdo"  height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                <iframe src="<?= $ht['localizacion'] ?>"  height="100" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            </div>
+                            <?php endforeach; ?>
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Lugares cercanos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php foreach( $lugares as $lch ) : ?>
+                                            <tr>               
+                                                <td><i class="fas fa-map-signs"></i> <?= $lch['lugar']?></td>                                         
+                                            </tr> 
+                                        <?php endforeach; ?> 
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -66,17 +80,18 @@
     <div class="row">
         <div class="col-md-12">
             <hr>
-            <h1 class="display-4">Habitaciones disponibles</h1>
+            <span class="titulo-post">Habitaciones disponibles</span>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <section>
+                <?php foreach( $habitaciones as $hth ) : ?>
                 <article>
                     <div class="articulos border mt-5">
                         <div class="row">
                             <div class="col-md-3">
-                            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                            <!-- <div id="carouselExampleFade2" class="carousel slide carousel-fade" data-ride="carousel2">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="../view/asset/ha3.jpg" class="d-block w-100" alt="...">
@@ -88,35 +103,68 @@
                                     <img src="../view/asset/ha3.jpg" class="d-block w-100" alt="...">
                                 </div>
                             </div>
-                                <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                                <a class="carousel-control-prev" href="#carouselExampleFade2" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon text-dark" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                                <a class="carousel-control-next" href="#carouselExampleFade2" role="button" data-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
-                            </div>
-                            </div>
-                            <div class="col-md-3 mt-3">
-                                <span class="titulo-post"><b>Junior Suite</b></span><hr>
-                                <i class="fas fa-user-friends"> Capacidad para 2 adultos</i><br>
-                                <i class="fas fa-baby"> 2 niños</i><br>
-                                <i class="fas fa-bed"> 2 cama king size</i>
+                            </div> -->
+                            <img src="<?= $hth['foto'] ?>" class="d-block w-100" alt="...">
                             </div>
                             <div class="col-md-3 mt-3">
-                                Wifi incluido, desayuno, estacionamiento sin valet,
-                                todo incluido. <br><hr>
-                                <span>tamaño: 100 pies cuadrado</span>
+                                <span class="titulo-post"><b><?= $hth['tipo'] ?></b></span><hr>
+                                <i class="fas fa-user-friends"> Capacidad para <?= $hth['cant_adulto'] ?> adultos</i><br>
+                                <i class="fas fa-baby"> <?= $hth['cant_niño'] ?> niños</i><br>
+                                <i class="fas fa-bed"> <?= $hth['cant_cama'] ?> cama king size</i>
                             </div>
                             <div class="col-md-3 mt-3">
-                                <span class="badge badge-danger">Orferta $RD: 5,000.00</span><br>
-                                <span>$RD: <b>10,000.00</b> por noche</span><br> <hr>
+                                <?= $hth['detalle'] ?> <br><hr>
+                                <span>tamaño: <?= $hth['tamaño'] ?> pies cuadrado</span>
+                            </div>
+                            <div class="col-md-3 mt-3">
+                                <span class="badge badge-danger">Orferta $RD: <?= $hth['precio_oferta'] ?></span><br>
+                                <span>$RD: <b><?= $hth['precio'] ?></b> por noche</span><br> <hr>
                                 <a href="../rt/reservaciones.php" class="btn btn-primary btn-sm">Reservar</a>
                             </div>
                         </div>
                     </div>
                 </article>
+                <?php endforeach;?>
+            </section>
+            <br>
+            <section>
+                <div class="comentarios">
+                    <div class="container">
+                        <div class="row">
+                            
+                            <p>Comentarios</p>
+                            <?php foreach( $comentarios as $cth ) : ?>
+                            <div class="col-md-12">
+                            <hr>
+                            <article>
+                                <h5><?= $cth['nombre'] ?> <?= $cth['apellido'] ?></h5> <p>dice:</p>
+                                <p>'<?= $cth['descripcion'] ?>'</p>
+                                <div>
+                                    <span class="badge badge-danger">Publicado <?= $cth['fecha'] ?></span>        
+                                </div>
+                                
+                            </article>
+                            </div>
+                            <?php endforeach; ?>
+                            <div class="col-md-12">
+                                    <form action="" class="mt-3">
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="comentario" id="" cols="30" rows="5"></textarea>
+                                        </div>
+                                        <input type="submit" class="btn btn-primary" value="Comentar">
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </div>

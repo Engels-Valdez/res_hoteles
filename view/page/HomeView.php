@@ -68,7 +68,7 @@
                         </div>
                         <div class="row mt-3">  
                             <div class="col-md-4">
-                                <input type="submit" name="buscarHotel" id="buscarHoteles" value="Buscar hoteles" class="btn btn-warning btn-sm btn-block">
+                                <input type="submit" name="buscarHotel" id="buscarHoteles" value="Buscar hoteles" class="btn btn-warning btn-sm btn-block" onclick="res();">
                             </div>
                         </div>
                         <div class="row">
@@ -117,11 +117,11 @@
 
 <!--Contenido prinpical-->
 <div class="container">
-    <div class="row mb-3">
-        <div class="col-md-12" id='resultado-busqueda'>
-            <Span class="resultado-busqueda">Resultados de la busqueda</Span>
+    <!-- <div class="row mb-3">
+        <div class="col-md-12" id='resultado'>
+            <Span class="resultado-busqueda" >Resultados de la busqueda</Span>
         </div>
-    </div>
+    </div> -->
     <div class="row">
         <div class="col-md-10">
             <main>
@@ -152,7 +152,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6"> 
-                                <p class="titulo-post"> <a href="hotel.php?id=<?= $fh['id']?>" target="blank"><b><?=$fh['nombre']?></b></a></p>
+                                <p class="titulo-post"> <a href="hotel.php?id=<?= $fh['id']?>&fecha-entrada=<?= $desde?>&fecha-salida=<?= $hasta?>" target="blank"><b><?=$fh['nombre']?></b></a></p>
                                 <hr>
                                 <span class="ciudad-post"><?=$fh['provincia']?></span>
                                 <p><span class="ubicacion-post">C/av.<?=$fh['calle']?></span></p>

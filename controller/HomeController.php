@@ -24,5 +24,5 @@
 
     
 
-    require_once('../view/page/HomeView.php');
+    @require_once('../view/page/HomeView.php');
     ?>

@@ -17,7 +17,7 @@ class HotelModel{
         public function getHotelsSm($nombre, $cuidad){
 
             $quer= $this->conec->query("SELECT hoteles.id, hoteles.nombre, hoteles.provincia, hoteles.calle, hoteles.prestigio FROM hoteles
-            WHERE nombre LIKE '%$nombre%' AND provincia = '$cuidad'");
+            WHERE nombre LIKE '%$nombre%' AND provincia like '%$cuidad%'");
 
             while( $resultado = $quer->fetch(PDO::FETCH_ASSOC) ){
 
