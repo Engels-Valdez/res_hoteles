@@ -1,1 +1,1 @@
-<?php require_once('../view/page/ReservacionesView.php'); ?>
+<?php require_once('../Controller/ReservacionesCotroller.php'); ?>
