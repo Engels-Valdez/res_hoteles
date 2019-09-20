@@ -34,7 +34,7 @@ class HotelModel{
             $quer= $this->conec->query("SELECT foto_hotel.foto, foto_hotel.imagen_principal FROM foto_hotel
             INNER JOIN hoteles ON
             foto_hotel.id_hotel = hoteles.id
-            WHERE nombre LIKE '%$nombre%' AND provincia = '$cuidad'");
+            WHERE nombre LIKE '%$nombre%' AND provincia like '$cuidad%'");
 
             while( $resultado = $quer->fetch(PDO::FETCH_ASSOC) ){
 
