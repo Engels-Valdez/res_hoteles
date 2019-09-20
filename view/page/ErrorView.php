@@ -1,5 +1,5 @@
 <?php require_once('../view/page/layout/head.php') ?>
-    <title>Reservaciones</title>
+    <title>Mery Tours | Error</title>
 </head>
 <body class="bg-light">
 
