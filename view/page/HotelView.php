@@ -127,7 +127,7 @@
                             <div class="col-md-3 mt-3">
                                 <span class="badge badge-danger">Orferta $RD: <?= $hth['precio_oferta'] ?></span><br>
                                 <span>$RD: <b><?= $hth['precio'] ?></b> por noche</span><br> <hr>
-                                <a href="../rt/reservaciones.php" class="btn btn-primary btn-sm">Reservar</a>
+                                <a href="../rt/reservaciones.php?id=<?= $hth['id'] ?>&entrada=<?= $entrada ?>&salida=<?= $salida ?>" class="btn btn-primary btn-sm">Reservar</a>
                             </div>
                         </div>
                     </div>

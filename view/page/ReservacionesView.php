@@ -32,7 +32,7 @@
 
         <div class="mb-3">
           <label for="email">Correo</label>
-          <div class="input-group">z
+          <div class="input-group">
             <div class="input-group-prepend">
               <span class="input-group-text">@</span>
             </div>
@@ -53,43 +53,54 @@
 
         <div class="mb-3">
           <label for="check-in">Check-in</label>
-          <input type="date" class="form-control" id="check-in" placeholder="check-in" required>
+          <input type="text" class="form-control" id="check-in" placeholder="check-in" value="<?= $entrada?>"required readonly>
           <div class="invalid-feedback">
             Por favor debe introducir una fecha check-in.
           </div>
         </div>
-
         <div class="mb-3">
           <label for="check-out">Check-out</label>
-          <input type="date" class="form-control" id="check-out" placeholder="check-out">
+          <input type="text" class="form-control" id="check-out" placeholder="check-out" value="<?= $salida?>" readonly>
         </div>
 
         <div class="row">
           <div class="col-md-5 mb-3">
-            <label for="cantidad">Cantidad de persona</label>
-            <select class="custom-select d-block w-100" id="cantidad" required>
-              <option value="">1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+          <?php foreach( $idPrecio as $ip ) : ?>
+            <label for="cantidad_adultos">Cantidad de adultos</label>
+            <select class="custom-select d-block w-100" id="cantidad_adultos" required>
+              <?php for($i = 0; $i < $ip['cant_adulto']; $i++) : ?>
+              <option value=""><?= $i + 1  ?></option>
+              <?php endfor; ?>
             </select>
             <div class="invalid-feedback">
-              Debe seleccionar la cantidad de persona.
+              Debe seleccionar la cantidad de adultos.
             </div>
           </div>
-          <div class="mb-3">
-          <label for="precio">Precio por persona.</label>
-          <input type="text" class="form-control" id="precio" readonly required>
-        </div>
-          <div class="col-md-3 mb-3">
+          <div class="col-md-7 mb-3">
+            <label for="cantidad_nino">Cantidad de niños</label>
+            <select class="custom-select d-block w-100" id="cantidad_nino" required>
+            <?php for($i = 0; $i < $ip['cant_niño']; $i++) : ?>
+              <option value=""><?= $i + 1 ?></option>
+              <?php endfor; ?>
+            </select>
+            <div class="invalid-feedback">
+              Debe seleccionar la cantidad de niños.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+         
+          <label for="precio">Precio por noche.</label>
+          <input type="text" class="form-control" id="precio"  value="<?= $ip['precio_oferta']?>" readonly required>
+          
+          </div>
+          <div class="col-md-6 mb-3">
             <label for="total">Total</label>
-            <input type="text" class="form-control" id="Total" readonly required>
+            <input type="text" class="form-control" id="Total" value="<?= $ip['precio_oferta'] * $noches->format('%a%') ?>"readonly required>
           </div>
         </div>
-
+        <?php endforeach; ?>
         <hr class="mb-4">
-
+        
         <h4 class="mb-3">Metodo de pago</h4>
 
         <div class="d-block my-3">
