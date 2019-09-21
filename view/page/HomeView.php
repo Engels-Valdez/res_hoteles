@@ -60,10 +60,10 @@
                         </div>
                         <div class="row">
                             <div class="col-md-5">
-                                <input type="date" class="form-control form-control-sm" name="desde">
+                                <input type="date" class="form-control form-control-sm" name="desde" required min="<?php $hoy=date("Y-m-d"); echo $hoy;?>">
                             </div>
                             <div class="col-md-5">
-                                <input type="date" class="form-control form-control-sm" name="hasta">
+                                <input type="date" class="form-control form-control-sm" name="hasta" required min="<?php $hoy=date("Y-m-d"); echo $hoy;?>">
                             </div>
                         </div>
                         <div class="row mt-3">  
