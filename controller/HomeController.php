@@ -1,7 +1,9 @@
 <?php
     require_once('../model/HomeModel.php');
+    date_default_timezone_set('UTC');
 
-    $msj = false;
+    $msj;
+    $msjDate;
 
     $nombre = $_POST['hotel'];
     $ciudad = $_POST['ciudad'];
@@ -9,8 +11,14 @@
     $hasta = $_POST['hasta'];
     $buscarHotel = $_POST['buscarHotel'];
 
+    $desdeLimite = date("Y-m-d");
+
     if( empty($nombre) || empty($ciudad) || empty($hasta) || empty($desde) ){
         $msj=true;
+    }elseif($desde < $desdeLimite ){
+        $msjDate = 'Esta fecha no esta disponible';
+    }elseif($desde > $hasta){
+        $msjDate = 'La fecha de entrada no puede ser mayor que la de salida';
     }else{
         
     if( $_SERVER['REQUEST_METHOD'] == 'POST' && $buscarHotel == 'Buscar hoteles'){
