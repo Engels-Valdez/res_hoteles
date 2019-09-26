@@ -1,6 +1,6 @@
 <?php session_start();
 
-    if( isset($_SESSION['seccion']) ){
+    if( isset($_SESSION['Seccion']) ){
         
         header('Location: rt/home.php');
 
