@@ -6,7 +6,7 @@
 
         try {
 
-            $conect = new PDO('mysql:host=localhost; dbname=res_hoteles;','root','123456');
+            $conect = new PDO('mysql:host=localhost; dbname=res_hoteles;','root','pHe220728?');
 
         } catch (PDOException $e) {
 
