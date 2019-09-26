@@ -120,7 +120,7 @@
     </div>
 </div>
 <!--{Modals-->
-<?php require_once('../view/page/layout/modal-aviso.php'); ?>
+<?php require_once('../view/page/modals/modal-aviso.php'); ?>
 <!--Modals}-->
 
 <!--Contenido prinpical-->
