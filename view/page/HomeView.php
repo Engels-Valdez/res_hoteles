@@ -185,5 +185,6 @@
 <script src="../view/js/jquery-3.4.1.min.js"></script>
 <script src="../view/js/main.js"></script>
 <script src="../view/js/bootstrap.min.js"></script>
+<script src="../view/js/animation.js"></script>
 </body>
 </html>
