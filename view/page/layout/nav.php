@@ -31,3 +31,4 @@
   </div>
 </nav>
 
+<script src="../view/js/animation.js"></script>
