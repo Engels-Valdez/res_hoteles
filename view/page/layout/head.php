@@ -11,3 +11,4 @@
     <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
     <link rel="icon" href="../view/asset/flaticon.png">
     <script src="https://kit.fontawesome.com/0f2f8fc78b.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
