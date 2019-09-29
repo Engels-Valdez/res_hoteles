@@ -50,11 +50,38 @@
                             </div>
                             <div class="col-md-4">
                                 <select name="ciudad" class="form-control form-control-sm">
-                                    <option value="Santo Domingo">Santo Domingo</option>
-                                    <option value="Punta Cana">Punta Cana</option>
-                                    <option value="Puerto Plata">Puerto Plata</option>
-                                    <option value="La Romana">La Romana</option>
-                                    <option value="Sosua">Sosua</option>
+                                <option>Selecciones una provincia</option>
+                            <option>Azua</option>
+                            <option>Bahoruco</option>
+                            <option>Dajabón</option>
+                            <option>Distrito Nacional</option>
+                            <option>Duarte, San Francisco de Macorís</option>
+                            <option>Elías Piña</option>
+                            <option>El Seibo</option>
+                            <option>Espaillat, Moca</option>
+                            <option>Hato Mayor</option>
+                            <option>Hermanas Mirabal, Salcedo</option>
+                            <option>Independencia, Jimaní</option>
+                            <option>La Altagracia</option>
+                            <option>La Romana</option>
+                            <option>La Vega</option>
+                            <option>María Trinidad Sánchez, Nagua</option>
+                            <option>Monseñor Nouel, Bonao</option>
+                            <option>Monte Cristi</option>
+                            <option>Monte Plata</option>
+                            <option>Pedernales</option>
+                            <option>Peravia, Baní</option>
+                            <option>Puerto Plata</option>
+                            <option>Samaná</option>
+                            <option>Sánchez Ramírez, Cotuí</option>
+                            <option>San Cristóbal</option>
+                            <option>San José de Ocoa</option>
+                            <option>San Juan</option>
+                            <option>San Pedro de Macorís</option>
+                            <option>Santiago</option>
+                            <option>Santiago Rodríguez</option>
+                            <option>Santo Domingo</option>
+                            <option>Valverde</option>
                                 </select>
                             </div>
                         </div>
