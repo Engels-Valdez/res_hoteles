@@ -17,7 +17,9 @@
           <div class="form-group">
             <label for="idHotel" class="col-form-label">Hotel:</label>
             <select name="idHotel" class="form-control form-control-sm" required>
-            <option value="">Riu</option>
+            <?php foreach( $HotelAll as $hnombre ) : ?>
+            <option value="<?= $hnombre['id']?>"><?= $hnombre['nombre']?></option>
+            <?php endforeach;?>
             </select>
           </div>
       </div>
