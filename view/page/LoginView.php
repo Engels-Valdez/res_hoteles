@@ -16,7 +16,7 @@
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Password" required>
                 <button class="btn btn-lg btn-warning btn-block mt-3" type="submit" name="btnInciar" value="iniciar">Iniciar</button>
-                <p class="mt-5 mb-3 text-muted"><a href="#">Registrate</a></p>
+                <p class="mt-5 mb-3 text-muted"><a href="registrar.php">Registrate</a></p>
             </form>
             </div>
         </div>
