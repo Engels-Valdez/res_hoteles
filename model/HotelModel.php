@@ -9,6 +9,7 @@
             private $lugaresCercanosHotel = array();
             private $comentarioHotel = array();
             private $habitacionesList = array();
+            private $HotelesAll = array();
 
             public function __construct(){
 
@@ -83,6 +84,42 @@
                 }
 
                 return  $this->habitacionesList;
+            }
+
+            public function getHotelesAll(){
+
+                $quer = $this->conec->query('select * from hoteles');
+
+                while( $res = $quer->fetch( PDO::FETCH_ASSOC ) ){
+
+                    $this->HotelesAll[] = $res;
+                }
+
+                return $this->HotelesAll;
+
+            }
+
+            public function setHotel( $nombre, $provincia, $calle, $prestigio, $localizacion ){
+
+                $statement = $this->conec->prepare("insert into hoteles(id,nombre,provincia,calle,prestigio,localizacion)
+                                                    values('null','$nombre','$provincia','$calle','$prestigio','$localizacion' )");
+                $statement->execute();
+
+            }
+
+            public function eliminarHotel( $id ){
+
+                $statement = $this->conec->prepare("delete from hoteles where id = $id");
+                $statement->execute();
+                
+            }
+
+            public function actualizarHotel( $id, $nombre, $provincia, $calle, $prestigio, $localizacion ){
+
+                $statement = $this->conec->prepare("update hoteles set nombre = '$nombre', provincia = '$provincia', calle = '$calle',
+                                                    prestigio = '$prestigio', localizacion = '$localizacion' where id = '$id' ");
+                $statement->execute();
+                
             }
 
 
