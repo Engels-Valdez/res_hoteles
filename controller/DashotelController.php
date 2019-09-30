@@ -1,6 +1,7 @@
 <?php session_start();
     require_once('../model/HotelModel.php');
     require_once('../model/FotoHotelModel.php');
+    require_once('../model/LugaresHotelModel.php');
     require_once('../public/file.php');
 
     if( !isset( $_SESSION['Seccion'] ) ){
@@ -34,6 +35,7 @@
 
             $hm = new HotelModel();
             $hm->setHotel($nombreHotel,$provinciaHotel,$calleHotel,$pretigioHotel,$localizacionHotel);
+            header('Location: dashotel.php');
 
         }
 
@@ -60,6 +62,7 @@
 
             $sah = new HotelModel();
             $hotelesParaEditar = $sah->getHotel( $idModificarHotel );
+            header('Location: dashotel.php');
 
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -83,6 +86,7 @@
 
                 move_uploaded_file( $_FILES['fotoHotel']['tmp_name'], RUTA.'/reshoteles/view/asset/'.$nombreImagen );
                 $getFotoHotel->setFotoHotel( $nombreImagen, $idFotoHotel, $imagenPrincHotel );
+                header('Location: dashotel.php');
 
             }else{
                 echo "
@@ -110,9 +114,32 @@
             header('Location: dashotel.php');
         }
 
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        
+        //////////////////////////////////////////Lugares hotel//////////////////////////////////////////////////////////
 
+        $lugar = $_POST['lugarHotel'];
+        $idHotelLugares = $_POST['idHotelLugar'];
+        $frmLugares = $_POST['frmLugares'];
+
+        $lugarModel = new LugaresHotelModel();
+        $lugarModList = $lugarModel->getLugares();
+
+        $lugaresEliminar = $_GET['eliminar-lugar-hotel'];
+
+        if( $_SERVER['REQUEST_METHOD'] == 'POST' && !empty( $frmLugares ) ){
+
+            $insModlugar = new LugaresHotelModel();
+            $insModlugar->setLugares( $lugar, $idHotelLugares );
+            header('Location: dashotel.php');
+
+        }
+
+        if( $_SERVER['REQUEST_METHOD'] == 'GET' && !empty( $lugaresEliminar ) ){
+
+            $lugarModel->eliminarLugar( $lugaresEliminar );
+            header('Location: dashotel.php');
+            
+        }
+        
     }
 
     require_once('../view/page/DashotelView.php');
