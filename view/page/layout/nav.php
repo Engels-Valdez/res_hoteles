@@ -11,7 +11,7 @@
     <?php if( isset( $_SESSION['Seccion'] ) ) : ?>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <?= $_SESSION['Seccion'][0]['nombre'] ?>
+          <?= $_SESSION['Seccion'][0]['nombre'] . ' ' . $_SESSION['Seccion'][0]['apellido']?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <?php if( $_SESSION['Seccion'][0]['tipo'] == 1 ) : ?>
