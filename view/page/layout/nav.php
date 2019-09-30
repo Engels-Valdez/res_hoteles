@@ -17,7 +17,7 @@
           <?php if( $_SESSION['Seccion'][0]['tipo'] == 1 ) : ?>
           <a class="dropdown-item" href="dashotel.php">Hoteles</a>
           <a class="dropdown-item" href="#">Habitaciones</a>
-          <a class="dropdown-item" href="#">Usuarios</a>
+          <a class="dropdown-item" href="usuarios.php">Usuarios</a>
           <div class="dropdown-divider"></div>
           <?php endif;?>
           <a class="dropdown-item" href="cerrar.php">Cerrar seccion</a>

@@ -26,7 +26,7 @@
 
             while( $res = $quer->fetch( PDO::FETCH_ASSOC ) ){
 
-                $this->listUsuario = $res;
+                $this->listUsuario[] = $res;
 
             }
 
