@@ -48,7 +48,7 @@
         if( $_SERVER['REQUEST_METHOD'] == 'POST' && !empty( $frmUpdateHotel ) ){
 
             $ah = new HotelModel();
-            $ah->actualizarHotel( $idModificarHotel, $_POST['nombreHotelU'], $_POST['provinciaHotelu'], $_POST['calleHotelU'], $_POST['prestigioHotelU'], $_POST['localizacionHotelU'] );
+            $ah->actualizarHotel( $idModificarHotel, $_POST['nombreHotelU'], $_POST['provinciaHotelU'], $_POST['calleHotelU'], $_POST['prestigioHotelU'], $_POST['localizacionHotelU'] );
             header('Location: dashotel.php');
 
         }
