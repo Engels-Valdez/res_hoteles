@@ -140,7 +140,7 @@
                     <div class="container">
                         <div class="row">
                             
-                            <p>Comentarios</p>
+                            <p class="mt-5">Comentarios</p>
                             <?php foreach( $comentarios as $cth ) : ?>
                             <div class="col-md-12">
                             <hr>
@@ -154,18 +154,24 @@
                             </article>
                             </div>
                             <?php endforeach; ?>
+                            <?php if( isset( $_SESSION['Seccion'] ) ) : ?>
                             <div class="col-md-12">
-                                    <form action="" class="mt-3">
+                                    <form method="post" class="mt-3">
                                         <div class="form-group">
                                             <textarea class="form-control" name="comentario" id="" cols="30" rows="5"></textarea>
                                         </div>
-                                        <input type="submit" class="btn btn-primary" value="Comentar">
+                                        <input type="submit" class="btn btn-primary" name="frmComentario" value="Comentar">
                                     </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <?php else : ?>
+                <div class="alert alert-warning mt-5">
+                    <p>Debes <a href="login.php">iniciar seccion</a> para poder poner tu comentario.</p>
+                </div>
+            <?php endif;?>
         </div>
     </div>
 </div>

@@ -122,6 +122,14 @@
                 
             }
 
+            public function comentarHotel( $descripcion, $fecha, $id_hotel, $id_usuario ){
+
+                $statement = $this->conec->prepare("insert into comentario_hotel(id, descripcion, fecha, id_hotel, id_usuario)
+                                                    values('null', '$descripcion', '$fecha', '$id_hotel', '$id_usuario' )");
+                $statement->execute();
+                
+            }
+
 
         }
     ?>
