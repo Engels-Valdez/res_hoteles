@@ -5,7 +5,8 @@
 <header>
     <?php require_once('../view/page/layout/nav.php') ?>
 </header>
-
+<body>
+    
 <div class="container">
     <div class="row">
         <div class="col-md-12 animation-arriba"><br>
