@@ -15,8 +15,7 @@
 
         public function getIdPrecioHabitaciones( $id ){
 
-            $quer = $this->conec->query("select habitaciones.*, hoteles.nombre from habitaciones
-                                        inner join hoteles on habitaciones.id = hoteles.id where habitaciones.id = $id ");
+            $quer = $this->conec->query("select * from habitaciones where id = $id ");
 
             while( $res = $quer->fetch( PDO::FETCH_ASSOC ) ){
 
