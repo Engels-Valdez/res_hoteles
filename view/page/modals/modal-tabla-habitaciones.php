@@ -2,7 +2,7 @@
 <style>
 table {
   display: block;
-  height: 250px;
+  height: 400px;
   overflow-y: auto;
 }
 </style>
@@ -12,7 +12,7 @@ table {
     <div class="modal-content">
         <div class="modal-body">
         <div class="table-resposive mt-5">
-            <table class="table table-hover table-warning my-5">
+            <table class="table table-hover table-striped table-warning my-5">
                 <thead>
                 <tr>
                     <th>Tipo</th>
@@ -30,23 +30,25 @@ table {
                 </tr>
                 </thead>
                 <tbody>
+                <?php foreach( $listaHabitaciones as $listHab ) : ?>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><?= $listHab['tipo'] ?></td>
+                        <td><?= $listHab['precio'] ?></td>
+                        <td><?= $listHab['precio_oferta'] ?></td>
+                        <td><?= $listHab['cant_cama'] ?></td>
+                        <td><?= $listHab['cant_adulto'] ?></td>
+                        <td><?= $listHab['cant_niño'] ?></td>
+                        <td><?= $listHab['tamaño'] ?></td>
+                        <td><?= $listHab['detalle'] ?></td>
+                        <td><?= $listHab['disponibilidad'] ?></td>
+                        <td><?= $listHab['nombre'] ?></td>
+                        <td><img src="<?= $listHab['foto'] ?>" alt="" width="100"></td>
                         <td>
-                          <a href="?eliminar-habitacion = " class="btn btn=sm btn-danger btn-block">Eliminar</a>
-                          <a href="?editar-habitacion = " class="btn btn-sm- btn-success btn-block">Editar</a>
+                          <a href="?eliminar-habitacion=<?= $listHab['id'] ?>" class="btn btn=sm btn-danger btn-block">Eliminar</a>
+                          <a href="?editar-habitacion=<?= $listHab['id'] ?>" class="btn btn-sm- btn-success btn-block">Editar</a>
                         </td>
                     </tr>
+                <?php endforeach;?>
                 </tbody>
             </table>
         </div>

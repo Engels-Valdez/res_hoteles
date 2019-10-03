@@ -139,9 +139,9 @@
                 <div class="comentarios">
                     <div class="container">
                         <div class="row">
-                            
+                        <?php foreach( $comentarios as $cth ) : ?>
                             <p class="mt-5">Comentarios</p>
-                            <?php foreach( $comentarios as $cth ) : ?>
+                            
                             <div class="col-md-12">
                             <hr>
                             <article>
