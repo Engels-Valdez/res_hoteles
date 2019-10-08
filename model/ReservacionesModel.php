@@ -28,7 +28,7 @@
 
         public function getTarjetaCredito( $id ){
 
-            $quer = $this->conec->query("select * from tarjeta_credito where id = $id");
+            $quer = $this->conec->query("select * from tarjeta_credito where id_usuario = $id");
             
             while( $res = $quer->fetch( PDO::FETCH_ASSOC ) ){
 
