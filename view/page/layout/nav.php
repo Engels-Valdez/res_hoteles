@@ -15,11 +15,14 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <?php if( $_SESSION['Seccion'][0]['tipo'] == 1 ) : ?>
+          <a class="dropdown-item" href="home.php">Home</a>
           <a class="dropdown-item" href="dashotel.php">Hoteles</a>
           <a class="dropdown-item" href="habitaciones.php">Habitaciones</a>
           <a class="dropdown-item" href="usuarios.php">Usuarios</a>
           <div class="dropdown-divider"></div>
           <?php endif;?>
+          <a class="dropdown-item" href="tarjeta-pago.php">Tarjeta de credito</a>
+          <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="cerrar.php">Cerrar seccion</a>
         </div>
       </li>

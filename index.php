@@ -6,7 +6,7 @@
 
     }else{
 
-        header('Location: rt/login.php');
+        header('Location: rt/home.php');
     }
 
 ?>
