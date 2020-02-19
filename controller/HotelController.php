@@ -8,7 +8,7 @@
     $salida = $_GET['fecha-salida'];
 
     $inpComentario = $_POST['comentario'];
-    $fechaActual = date("Y-m-d");
+    $fechaActual = date("y-m-d");
     $usuarioActual = $_SESSION['Seccion'][0]['id'];
 
     $frmComentario = $_POST['frmComentario'];
@@ -25,6 +25,7 @@
     }
 
     if( $_SERVER['REQUEST_METHOD'] == 'POST' && !empty( $frmComentario ) ){
+
 
         $comentario = new HotelModel();
         $comentario->comentarHotel($inpComentario,$fechaActual,$id,$usuarioActual);

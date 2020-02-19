@@ -1,11 +1,17 @@
 <?php
     require_once('../model/HabitacionesModel.php');
+    require_once('../model/HotelModel.php');
     require_once('../public/file.php');
     
     $habitaciones = new HabitacionesModel();
+    $hoteles = new HotelModel();
 
     //////Listar habitaciones//////
     $listaHabitaciones = $habitaciones->getHabitaciones();
+
+    //////lista de hoteles//////
+
+    $lista_de_Hoteles = $hoteles->getHotelesAll();
 
     /////Insertar y actualizar habitaciones///////
     $tipo = $_POST['tipo'];

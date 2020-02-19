@@ -116,6 +116,8 @@
           </div>
         </div>
         <div id="metodoC">
+        
+          <?php if(!empty( $datosT)) : ?>
         <?php foreach($datosT as $dtc) : ?>
         <div class="row">
         <div class="col-md-6">
@@ -146,7 +148,42 @@
           </div>
         </div>
       </div>
-  <?php endforeach;?>
+      <?php endforeach;?>
+      <?php else : ?>
+ 
+        
+       
+        <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="nombreT">Nombre de la tarjeta</label>
+            <input type="text" name="tarjetaNombre" id="nombreT" class="form-control" value="" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+        <div class="form-group">
+            <label for="numeroT">Numero de tarjeta</label>
+            <input type="text" name="tarjetaNnumer" id="numeroT" class="form-control" placeholder="0000-0000-0000-0000" value="" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="fechaET">Fecha de expiracion</label>
+            <input type="text" name="tarjetaFecha" id="fechaET" class="form-control" placeholder="00/00" value="" required>
+          </div>
+        </div>
+        <div class="col-md-3">
+        <div class="form-group">
+            <label for="cvvT">CVV</label>
+            <input type="text" name="tarjetaCvv" id="cvvT" class="form-control" placeholder="000" value="" required>
+          </div>
+        </div>
+      </div>
+      <?php endif;?>
+      
         </div>
         <?= $mesajeConfirmacion; ?>
         <hr class="mb-4">

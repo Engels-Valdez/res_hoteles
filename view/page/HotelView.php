@@ -121,8 +121,8 @@
                                 <i class="fas fa-bed"> <?= $hth['cant_cama'] ?> cama king size</i>
                             </div>
                             <div class="col-md-3 mt-3">
-                                <?= $hth['detalle'] ?> <br><hr>
-                                <span>tamaño: <?= $hth['tamaño'] ?> pies cuadrado</span>
+                                <?= $hth['detalle'] ?> <br>
+                                
                             </div>
                             <div class="col-md-3 mt-3">
                                 <span class="badge badge-danger">Orferta $RD: <?= $hth['precio_oferta'] ?></span><br>

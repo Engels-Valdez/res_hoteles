@@ -53,12 +53,12 @@
                         <input type="number" name="cant_nino" id="cant_nino" class="form-control form-control-sm" min="0" max="4" required>
                     </div>
                 </div>
-                <div class="col-md-12">
+                <!-- <div class="col-md-12">
                     <div class="form-group">
                         <label for="tamano">Tamaño de la habitacion</label>
                         <input type="text" name="tamano" id="tamano" class="form-control form-control-sm" required>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="detalle">Detalles de la habitacion</label>
@@ -75,7 +75,9 @@
                     <label for="id_hotel">Hotel</label>
                     <select  name="id_hotel" id="id_hotel" class="form-control form-control-sm" required>
                         <option>Selecciones un hotel</option>
-                        <option value="9">Nickelodeon Hotels</option>
+                        <? foreach( $lista_de_Hoteles as $hot ) : ?>
+                        <option value="<?= $hot['id'] ?>"><?= $hot['nombre'] ?></option>
+                        <? endforeach; ?>
                     </select>
                 </div>
                 <div class="col-md-12">
@@ -134,12 +136,12 @@
                         <input type="number" name="cant_nino" id="cant_nino" class="form-control form-control-sm" min="0" max="4" value="<?= $hbedli['cant_niño'] ?>" required>
                     </div>
                 </div>
-                <div class="col-md-12">
+                <!-- <div class="col-md-12">
                     <div class="form-group">
                         <label for="tamano">Tamaño de la habitacion</label>
                         <input type="text" name="tamano" id="tamano" class="form-control form-control-sm" value="<?= $hbedli['tamaño'] ?>" required>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="detalle">Detalles de la habitacion</label>
